@@ -1,0 +1,22 @@
+<html ng-app="ContactApp">
+
+<head>
+    <title>My Contact App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <h1>My Contact App</h1>
+    <div class="container" ng-controller="ContactCtrl as ctrl">
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="contact in ctrl.contacts">
+                <span>{{ ctrl.selectedContact.name.first + " " + ctrl.selectedContact.name.last }}</span>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
